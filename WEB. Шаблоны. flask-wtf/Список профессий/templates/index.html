@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>Миссия Колонизация Марса</h1>
+        <h4>И на Марсе будут яблони цвести!</h4>
+
+        <h2>Список профессий</h2>
+
+        {% if list_type in ["ul", "ol"] %}
+            <{{ list_type }}>
+            {% for item in jobs %}
+                <li>{{ item }}</li>
+            {% endfor %}
+            </{{ list_type }}>
+        {% else %}
+            Ошибка, введите корректный тип списка!
+        {% endif %}
+    </body>
+</html>
